@@ -10,7 +10,7 @@ const Charcomics = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:3001/comics/${id}`);
+            const response = await axios.get(`https://boiling-forest-20336.herokuapp.com/comics/${id}`);
             setData(response.data);
             setIsLoading(false);
         };

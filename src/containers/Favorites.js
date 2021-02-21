@@ -9,7 +9,7 @@ const Favorites = ({ userToken }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:3001/favorites/${userToken}`);
+            const response = await axios.get(`https://boiling-forest-20336.herokuapp.com/favorites/${userToken}`);
             setData(response.data);
             setIsLoading(false);
         };

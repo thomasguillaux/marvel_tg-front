@@ -13,7 +13,7 @@ const Signup = ({ setUser }) => {
     try {
       event.preventDefault();
       const response = await axios.post(
-        "http://localhost:3001/signup",
+        "https://boiling-forest-20336.herokuapp.com/signup",
         {
           username: username,
           email: email,

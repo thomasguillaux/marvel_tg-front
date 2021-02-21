@@ -22,4 +22,3 @@ const Character = ({ character, path, extension, index, id, handleClick }) => {
 
 export default Character;
 
-{/* <Link to={`/comics/${id}`} character={"character"} key={index} style={{textDecoration: 'none'}} > */}

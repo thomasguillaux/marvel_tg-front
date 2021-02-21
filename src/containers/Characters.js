@@ -12,7 +12,7 @@ const Characters = ({ userToken }) => {
     useEffect(() => {
         const fetchData = async () => {
    
-            const response = await axios.get("http://localhost:3001/characters");
+            const response = await axios.get("https://boiling-forest-20336.herokuapp.com/characters");
             setData(response.data);
             setResults(response.data.results)
             setIsLoading(false);
@@ -37,13 +37,14 @@ const Characters = ({ userToken }) => {
     const handleClick = async (character) => {
         try {
             if (userToken) {
-                const response = await axios.post("http://localhost:3001/characters", {
+                const response = await axios.post("https://boiling-forest-20336.herokuapp.com/characters", {
                     id: character._id,
                     name: character.name,
                     description: character.description,
                     picture_path: `${character.thumbnail.path}.jpg`,
                     userToken: userToken,
                 })
+                console.log(response)
                 alert(`${character.name} was added to your favorites`);
             } else {
                 alert("Please log in")

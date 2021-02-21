@@ -12,7 +12,7 @@ const Login = ({ setUser }) => {
         try {
             
         event.preventDefault();
-        const response = await axios.post("http://localhost:3001/login", {
+        const response = await axios.post("https://boiling-forest-20336.herokuapp.com/login", {
             email: email,
             password: password
         });
