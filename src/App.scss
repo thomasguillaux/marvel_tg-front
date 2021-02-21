@@ -1,0 +1,413 @@
+.App {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+// Navbar
+
+.logo__nav  img {
+  width: 100px;
+}
+
+.header__container {
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__links {
+  width: 500px;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #151515;
+  font-weight: 600;
+}
+
+.nav__links div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+
+.nav__links div:not(:last-child):hover {
+  border-bottom: #E62429 solid 3px;
+  box-sizing: border-box;
+}
+
+.signout {
+  background: none;
+  border: #151515 solid 2px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.login {
+  border-radius: 20px !important;
+}
+
+.signout:hover {
+  border: #E62429 solid 2px;
+  background-color: #E62429;
+  color: #ffffff;
+}
+
+// Hero
+
+.hero__character {
+  height: 300px;
+  max-width: 1300px;
+  background-image: url(./assets/marvel.jpg);
+  margin-bottom: 30px;
+  object-fit: cover;
+  position: relative;
+}
+
+
+.hero__comics {
+  height: 300px;
+  max-width: 1300px;
+  background-image: url(./assets/comics.jpg);
+  margin-bottom: 30px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+
+.search__bar {
+  outline: none;
+  border: #151515 solid 1px;
+  position: absolute;
+  top: 345px;
+  line-height: 50px;
+  width: 500px;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  box-shadow:  20px 20px 60px #adadad,
+             
+}
+
+.search__bar::placeholder {
+padding-left: 22px;
+font-size: 20px;
+}
+
+// Characters Page
+
+.characters__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.favorites__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.character__card {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 430px;
+  margin: 20px;
+  position: relative;
+  box-shadow:  12px 12px 24px #c4c4c4,
+  -12px -12px 24px #ffffff;
+}
+
+.character__card:hover{
+  box-shadow: 10px 10px 7px #E62429;
+}
+
+.character__card button {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  align-self: center;
+}
+
+.character__card:hover button {
+  display: flex;
+  cursor: pointer;
+}
+
+.img__container {
+  border-bottom: #E62429 solid 4px;
+  width: 230px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.img__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter .2s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+.img__container img:hover {
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+.character__info {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.character__description {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 150px;
+  background-color: #151515;
+}
+
+.character__description h2 {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fav__button {
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #E62429;
+  padding: 5px 10px;
+}
+
+// Comics Page 
+
+.comics__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.comics__card {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 430px;
+  margin: 20px;
+  box-shadow:  12px 12px 24px #c4c4c4,
+  -12px -12px 24px #ffffff;
+}
+
+.comics__card:hover{
+  box-shadow: 10px 10px 7px #E62429;
+}
+
+.comic__description {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 150px;
+  background-color: #151515;
+}
+
+.comic__description h2 {
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.character__comics {
+  width: 30%;
+  height: 100vh;
+}
+
+.assigned__comics {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.charcomics__card {
+  width: 230px;
+  height: 350px;
+  margin: 30px;
+  background-color: #151515;
+  color: #ffffff;
+  text-align: center;
+  box-shadow:  12px 12px 24px #c4c4c4,
+  -12px -12px 24px #ffffff;
+}
+
+.charcomics__description {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.hero__home {
+  height: 100vh;
+}
+
+.category {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.characters__category {
+  height: 50%;
+  display: flex;
+}
+
+.comics__category {
+  height: 50%;
+  display: flex;
+}
+
+.characters__banner {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comics__banner {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__container {
+  width: 80%;
+  height: 80%;
+  box-shadow:  20px 20px 60px #969696,
+  -20px -20px 60px #ffffff;
+}
+
+.comic__container {
+  width: 80%;
+  height: 80%;
+  box-shadow:  20px 20px 60px #969696,
+  -20px -20px 60px #ffffff;
+}
+
+.banner__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comic__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.redir__characters {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redir__comics {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.scroll__down {
+  border: #e6242bbf solid 2px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  top: calc(100vh - 150px);
+}
+
+.scroll__down span {
+  font-size: 20px;
+  color: #E62429;
+}
+
+.login__section {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 480px;
+}
+
+.login__module {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login__module input {
+  outline: none;
+  border: none;
+  width: 300px;
+  border-bottom: #E62429 solid 1px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.login__module input::placeholder {
+  color: #686868;
+  font-size: 18px;
+}
+
+.login__button {
+  background: none;
+  border: #151515 solid 1px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
